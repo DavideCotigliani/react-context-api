@@ -1,4 +1,9 @@
-import { useState } from 'react'
+// Importo il contesto
+import PostContext from './contexts/PostContext';
+// importo gli altri componenti
+import PostPage from './components/PostPage';
+import PostList from './components/PostList';
+import PostCard from './components/PostCard';
 
 function App() {
 
@@ -11,7 +16,11 @@ function App() {
 
   return (
     <>
-
+      <PostContext.Provider>
+        <PostPage></PostPage>
+        <PostList></PostList>
+        <PostCard></PostCard>
+      </PostContext.Provider>
     </>
   )
 }

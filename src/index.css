@@ -2,6 +2,32 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 h3 {
     color: red;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    padding: 15px;
+    font-size: 25px;
+    margin-left: 20%;
+}
+
+.custom-link {
+    color: darkred;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.custom-link:hover {
+    font-weight: 700;
+    color: black;
 }

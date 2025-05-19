@@ -7,10 +7,6 @@ const links = [
     {
         path: '/postlist',
         label: 'PostList',
-    },
-    {
-        path: '/postcard',
-        label: 'Postcard',
     }
 ]
 const MainNavbar = () => {

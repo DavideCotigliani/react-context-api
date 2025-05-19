@@ -24,8 +24,10 @@ function App() {
           <Routes>
             <Route Component={DefaultLayout}>
               <Route path='/' Component={PostPage} />
-              <Route path='/postlist' Component={PostList} />
-              <Route path='/postcard' Component={PostCard} />
+              <Route path='/postlist'>
+                <Route index Component={PostList} />
+                <Route path=':id' Component={PostCard} />
+              </Route>
             </Route>
           </Routes>
         </BrowserRouter>

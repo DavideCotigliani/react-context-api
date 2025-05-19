@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <PostContext.Provider>
+      <PostContext.Provider value={{ posts }}>
         <PostPage></PostPage>
         <PostList></PostList>
         <PostCard></PostCard>

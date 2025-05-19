@@ -1,9 +1,9 @@
-import React from 'react'
+
 
 const PostCard = () => {
     return (
         <div>
-            <h3>Card singola</h3>
+            <h4>Card singola</h4>
         </div>
     )
 }

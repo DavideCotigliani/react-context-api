@@ -4,6 +4,9 @@ import PostContext from './contexts/PostContext';
 import PostPage from './components/PostPage';
 import PostList from './components/PostList';
 import PostCard from './components/PostCard';
+// Imposto le rotte per le pagine
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import DefaultLayout from './layouts/DefaultLayout';
 
 function App() {
 
@@ -17,9 +20,15 @@ function App() {
   return (
     <>
       <PostContext.Provider value={{ posts }}>
-        <PostPage></PostPage>
-        <PostList></PostList>
-        <PostCard></PostCard>
+        <BrowserRouter>
+          <Routes>
+            <Route Component={DefaultLayout}>
+              <Route path='/' Component={PostPage} />
+              <Route path='/postlist' Component={PostList} />
+              <Route path='/postcard' Component={PostCard} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </PostContext.Provider>
     </>
   )
